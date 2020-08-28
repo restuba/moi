@@ -9,7 +9,7 @@ const FormContact = (props) => {
         <>
             <p>Got a project in mind? Okay, lets get started!</p>
             <p>
-                <a href="../../../assets/cv-restuba.pdf" target="_blank" download>
+                <a href="https://github.com/restuba/me/raw/a082c8d9bb3e90de43e1fdd74455273469c42d77/src/assets/img/CV%20-%20Restu%20Bayu%20Aji.pdf" target="" rel="" download>
                     <Button text="VIEW CV"/>
                 </a>
                 <a href="mailto:resbayuaji@gmail.com" id="DisabledAutoHideExample" style={{margin:"1rem"}}>
