@@ -10,7 +10,7 @@ class About extends Component {
           <h1>About Me</h1>
           <hr />
           <h6 style={{ letterSpacing: "1px" }}>
-            I'm graduate of Informatics Engineering - Telkom University. with passionate creative enthusiastic and always try to learn, i love developing website and app so really quality and unique.
+          I'm graduate of Informatics Engineering - Telkom University. with passionate creative enthusiastic and always try to learn, i've expertise in develop website and app so really quality and unique.
           </h6>
         </TitleSection>
         <ContentSection>
