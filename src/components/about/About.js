@@ -9,7 +9,7 @@ class About extends Component {
         <TitleSection>
           <h1>About Me</h1>
           <hr />
-          <h6 style={{ letterSpacing: "1px" }}>
+          <h6>
           I'm graduate of Informatics Engineering - Telkom University. with passionate creative enthusiastic and always try to learn, i've expertise in develop website and app so really quality and unique.
           </h6>
         </TitleSection>
@@ -36,6 +36,7 @@ const AboutContainer = styled.div`
   }
   @media (max-width: 425px){
     text-align: center;
+    padding: 0;
   }
 `;
 
@@ -49,6 +50,7 @@ const TitleSection = styled.div`
     }
   }
   h6{
+    line-height: 1.5rem;
     @media (max-width: 812px){
       font-size: 16px;
     }

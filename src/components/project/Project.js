@@ -9,6 +9,8 @@ import CriticalSituation from "../../assets/img/CriticalSituation.png";
 import WorkImage3 from "../../assets/img/work3tech.png";
 import WorkImage4 from "../../assets/img/work4tech.png";
 import WorkImage5 from "../../assets/img/work5tech.png";
+import Twitter from "../../assets/img/twitter-clone.png";
+import Mov from "../../assets/img/Mov.png";
 import styled from "styled-components";
 
 class Project extends Component {
@@ -20,6 +22,24 @@ class Project extends Component {
           <hr />
         </TitleSection>
         <ItemContainer>
+          <ProjectItem
+            title="Mov App"
+            year="WEB BASED"
+            tech="HTML / CSS / JAVASCRIPT"
+            info="Build a movie info app using Vanilla Javascript (no framework)"
+            link="https://mov-app.vercel.app/"
+            logo={Mov}
+            tech="HTML / CSS / JAVASCRIPT"
+          />
+          <ProjectItem
+            title="Twitter App"
+            year="WEB BASED"
+            tech="HTML / CSS / JAVASCRIPT"
+            info="Cloning twitter app using reactjs, tailwindcss, and API Github"
+            link="https://twitterapp-clone.vercel.app/"
+            logo={Twitter}
+            tech="HTML / CSS / JAVASCRIPT"
+          />
           <ProjectItem
             title="YOUTUBE MOVIE APP"
             year="WEB BASED"
@@ -111,6 +131,7 @@ const ProjectContainer = styled.div`
   }
   @media (max-width: 720px){
     text-align: center;
+    padding: 0;
   }
 `;
 

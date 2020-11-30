@@ -34,7 +34,7 @@ class App extends React.Component {
         </Router>
         )
       })
-    }, 3000)
+    }, 2000)
   }
   render(){
     return this.state.content;  

@@ -52,6 +52,7 @@ const Item = styled.div`
     }
     h6{
       font-size: 12px;
+      line-height: 1.5rem;
     }
     p{
       font-size: 12px;

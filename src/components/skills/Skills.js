@@ -67,7 +67,6 @@ const SkillsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 20px;
-
   @media (max-width: 720px){
     text-align: center;
   }
@@ -85,7 +84,6 @@ const DescSection = styled.div`
 `;
 
 const TableSection = styled.div`
-  padding: 20px;
   hr{
     width: 40px;
     background: #b88746;
