@@ -50,7 +50,7 @@ const TitleSection = styled.div`
     }
   }
   h6{
-    line-height: 1.5rem;
+    line-height: 2.5rem;
     @media (max-width: 812px){
       font-size: 16px;
     }

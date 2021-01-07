@@ -81,6 +81,9 @@ const TitleSection = styled.div`
 
 const DescSection = styled.div`
   padding: 20px;
+  p{
+    line-height: 2rem;
+  }
 `;
 
 const TableSection = styled.div`

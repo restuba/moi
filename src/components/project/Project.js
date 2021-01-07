@@ -32,6 +32,14 @@ class Project extends Component {
             tech="HTML / CSS / JAVASCRIPT"
           />
           <ProjectItem
+            title="CLONE NETFLIX WEBSITE"
+            year="WEB BASED"
+            tech="HTML / JAVASCRIPT"
+            info="Build netflix clone app using Reactjs, StyledComponents, and TMDB API"
+            link="https://netflix-clone-nu.vercel.app/"
+            logo={WorkImage5}
+          />
+          <ProjectItem
             title="Twitter App"
             year="WEB BASED"
             tech="HTML / CSS / JAVASCRIPT"
@@ -49,14 +57,7 @@ class Project extends Component {
             logo={Youtube}
             tech1="javascript"
           />
-          <ProjectItem
-            title="CLONE NETFLIX WEBSITE"
-            year="WEB BASED"
-            tech="HTML / CSS / JAVASCRIPT"
-            info="Build a Netflix Landing page using HTML, CSS, ReactJS, Icon Kits, and Styled Components"
-            link="https://netflix-landingpage.vercel.app/"
-            logo={WorkImage5}
-          />
+
           <ProjectItem
             title="LEGAPAKET"
             year="WEB BASED"
