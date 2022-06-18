@@ -1,18 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const CustomButton = props => {
-  return (
-      <ButtonStyle>
-        {props.text}
-      </ButtonStyle>
-  );
-
-};
-
-export default CustomButton;
-
-const ButtonStyle = styled.button`
+const Index = styled.button`
   position: relative;
   display: inline-block;
   padding: 8px 12px;
@@ -25,11 +13,13 @@ const ButtonStyle = styled.button`
   overflow: hidden;
   transition: 0.2s;
   background: transparent;
-  :hover{
+  :hover {
     color: white;
     background: #b88746;
     box-shadow: 0 0 10px #b88746, 0 0 40px #b88746, 0 0 80px #b88746;
-    border:1px solid #b88746;
+    border: 1px solid #b88746;
     transition: 0.5s;
   }
 `;
+
+export default Index;

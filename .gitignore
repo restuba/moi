@@ -11,6 +11,13 @@
 # production
 /build
 
+# husky ignore
+/.husky
+
+# vs config
+/.vscode
+
+
 # misc
 .DS_Store
 .env.local
