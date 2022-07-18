@@ -1,51 +1,30 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import breakpoints from '../../configs/breakpoints';
 
-export const AboutContainer = styled.div`
-  display: flex;
-  background: rgb(6, 6, 6);
-  justify-content: center;
+const Wrapper = styled(motion.div)`
+  display: grid;
   align-items: center;
-  padding: 20px;
-  @media (max-width: 820px) {
-    display: grid;
-    width: 100%;
-    text-align: center;
-  }
-  @media (max-width: 425px) {
-    text-align: center;
-    padding: 0;
-  }
-`;
-
-export const TitleSection = styled.div`
-  flex: 2;
-  padding: 20px;
-  h1 {
-    color: #b88746;
-    @media (max-width: 812px) {
-      font-size: 32px;
+  margin-bottom: 20rem;
+  .component_about_main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    .component_body {
+      font-family: 'Arial', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
     }
   }
-  h6 {
-    line-height: 2.5rem;
-    @media (max-width: 812px) {
-      font-size: 16px;
+
+  @media screen and (min-width: ${breakpoints.md}) {
+    .component_about_main {
+      .component_body {
+        font-family: 'Domaine';
+      }
     }
   }
-  hr {
-    width: 40px;
-  }
 `;
 
-export const ContentSection = styled.section`
-  flex: 1;
-  padding: 20px;
-`;
-
-export const Banner = styled.img`
-  overflow: hidden;
-  width: 48vw;
-  @media (max-width: 720px) {
-    width: 270px;
-  }
-`;
+export default Wrapper;

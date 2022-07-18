@@ -5,6 +5,7 @@ export const ContactContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  min-height: 100vh;
   @media (max-width: 720px) {
     text-align: center;
   }

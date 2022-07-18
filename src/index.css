@@ -1,28 +1,31 @@
-@import url("https://fonts.googleapis.com/css?family=Questrial");
-div#root{
-  height: 100%;
-}
 * {
-  font-family: "Questrial", sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #fff;
+  text-decoration: none;
+  cursor: none !important;
 }
 
 body {
-  font-family: Questrial, sans-serif;
-  height: 100%;
+  line-height: 1;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Domaine";
 }
 
-html {
-  height: 100%;
-  margin: 0;
+a:active,
+a:hover {
+  outline: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+::-webkit-scrollbar {
+  background: transparent !important;
+  height: 6px;
+  width: 6px;
+  border-radius: 12px;
+  position: absolute;
+}
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+::-webkit-scrollbar-thumb {
+  background: transparent;
 }

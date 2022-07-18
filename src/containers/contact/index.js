@@ -1,6 +1,4 @@
 import React from 'react';
-import { Tooltip } from 'reactstrap';
-import { Button } from '../../components';
 import { ContactContainer, FormContainer, TitleSection } from './style';
 
 const Index = () => {
@@ -20,23 +18,16 @@ const Index = () => {
             rel=""
             download
           >
-            <Button>VIEW CV</Button>
+            {/* <Button>VIEW CV</Button> */}
           </a>
           <a
             href="mailto:resbayuaji@gmail.com"
             id="DisabledAutoHideExample"
             style={{ margin: '1rem' }}
           >
-            <Button text="HIRE ME">Email</Button>
+            {/* <Button text="HIRE ME">Email</Button> */}
           </a>
-          <Tooltip
-            style={{ color: 'white', backgroundColor: '#b88746' }}
-            placement="right"
-            autohide={false}
-            target="DisabledAutoHideExample"
-          >
-            resbayuaji.gmail.com
-          </Tooltip>
+          resbayuaji.gmail.com
         </p>
       </FormContainer>
     </ContactContainer>

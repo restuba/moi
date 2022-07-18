@@ -1,29 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '../../components';
-import Logo from '../../assets/img/largelogo.png';
-import { Banner, Greeting, HomeContainer, LogoContainer } from './style';
+import React, { useLayoutEffect } from 'react';
+import Wrapper from './style';
+import { animation } from './home.config';
 
 const Index = () => {
+  useLayoutEffect(() => {
+    animation();
+  }, []);
+
   return (
-    <HomeContainer className="animate__animated animate__fadeIn">
-      <Greeting>
-        <h1>HI.</h1>
-        <h1>I&apos;m Restu Bayu Aji</h1>
-        <hr />
-        <h6 style={{ color: '#777', letterSpacing: '3px' }}>
-          Front-end Developer / UI Developer
-        </h6>
-        <div className="mt-4">
-          <Link to="/contact">
-            <Button>CONTACT ME</Button>
-          </Link>
-        </div>
-      </Greeting>
-      <LogoContainer>
-        <Banner src={Logo} alt="reactlogo" className="circle" />
-      </LogoContainer>
-    </HomeContainer>
+    <Wrapper>
+      <div className="component_banner_main">
+        <h1>
+          <div className="line">
+            <span>Hello.</span>
+          </div>
+        </h1>
+      </div>
+    </Wrapper>
   );
 };
 

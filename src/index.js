@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
+import Pages from './pages';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { GlobalProvider } from './context/globalContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <GlobalProvider>
+      <Pages />
+    </GlobalProvider>
   </React.StrictMode>
 );
 reportWebVitals();

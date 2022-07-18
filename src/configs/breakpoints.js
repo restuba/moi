@@ -1,3 +1,4 @@
 export default {
-  tablet: '768px',
+  md: '768px',
+  sm: '375px',
 };
