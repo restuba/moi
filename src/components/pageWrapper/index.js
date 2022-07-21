@@ -62,7 +62,8 @@ const Index = (props) => {
     const difference = data.current - data.rounded;
     const acceleration = difference / size.width;
     const velocity = +acceleration;
-    const skew = velocity * 24;
+    const skewValue = size.width > 768 ? 24 : 12;
+    const skew = velocity * skewValue;
 
     scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
     requestAnimationFrame(() => {
