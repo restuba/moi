@@ -28,14 +28,14 @@ const Wrapper = styled.div`
     z-index: 100;
     box-sizing: content-box;
     .component_logo_wrapper {
-      margin-top: 40px;
+      margin-top: 20px;
     }
     .component_menu_scroll {
+      display: none;
       color: ${({ theme }) => {
         return theme.text;
       }};
       position: relative;
-      display: flex;
       align-items: center;
       gap: 16px;
       font-size: 1.5rem;
@@ -61,8 +61,7 @@ const Wrapper = styled.div`
   }
   .component_children_wrapper {
     display: grid;
-    width: calc(100vw - 80px);
-    margin-left: 80px;
+    width: calc(100vw - 0px);
     padding: 24px;
     box-sizing: border-box;
   }
@@ -91,6 +90,12 @@ const Wrapper = styled.div`
 
   @media screen and (min-width: ${breakpoints.md}) {
     .component_sidebar_wrapper {
+      .component_menu_scroll {
+        display: flex;
+      }
+      .component_logo_wrapper {
+        margin-top: 40px;
+      }
       width: 120px;
     }
     .component_children_wrapper {
@@ -125,27 +130,35 @@ export const Menu = styled(motion.div)`
     return theme.text;
   }};
   position: fixed;
-  top: 50%;
-  /* left: 16px; */
-  transform: translateY(-50%);
-  font-size: 2rem;
+  top: unset;
+  transform: unset;
+  bottom: 20px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   button {
     transform-origin: center;
     border: none;
-    padding: 20px;
     background: none;
     outline: none;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     span {
       transition: all 0.3s linear;
       position: relative;
-      transform-origin: 11px;
+      transform-origin: 9.9px;
       width: 36px;
       height: 2px;
       display: block;
       background: ${({ theme, open }) => {
         return open ? theme.background : theme.text;
       }};
-      margin: 8px;
       :first-child {
         transform: ${({ open }) => {
           return open ? 'rotate(45deg)' : 'rotate(0)';
@@ -157,5 +170,12 @@ export const Menu = styled(motion.div)`
         }};
       }
     }
+  }
+  @media screen and (min-width: ${breakpoints.md}) {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: unset;
+    right: unset;
+    background: transparent;
   }
 `;

@@ -5,7 +5,7 @@ import routes from './routes';
 
 const Index = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
