@@ -1,25 +1,25 @@
-import URL_GENERAL from '../../configs/url/general';
+import section from '../../configs/section';
 
 // eslint-disable-next-line import/prefer-default-export
 export const navRoutes = [
   {
+    id: section.home,
     label: 'home',
-    path: URL_GENERAL.LANDING,
   },
   {
+    id: section.about,
     label: 'about',
-    path: URL_GENERAL.ABOUT,
   },
   {
+    id: section.capability,
     label: 'capabilities',
-    path: URL_GENERAL.CAPABILITY,
   },
   {
+    id: section.project,
     label: 'projects',
-    path: URL_GENERAL.PROJECTS,
   },
   {
+    id: section.contact,
     label: 'contact',
-    path: URL_GENERAL.CONTACT,
   },
 ];

@@ -1,6 +1,6 @@
 import React, { Suspense, useEffect } from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
-import { PageWrapper, Spinner } from '../components';
+import { PageWrapper, ScrollContainer, Spinner } from '../components';
 import routes from './routes';
 
 const Index = () => {
@@ -12,17 +12,19 @@ const Index = () => {
     <Suspense fallback={<Spinner />}>
       <BrowserRouter>
         <PageWrapper>
-          <Routes>
-            {routes.map((route) => {
-              return (
-                <Route
-                  path={route.path}
-                  element={route.component}
-                  key={route.path}
-                />
-              );
-            })}
-          </Routes>
+          <ScrollContainer>
+            <Routes>
+              {routes.map((route) => {
+                return (
+                  <Route
+                    path={route.path}
+                    element={route.component}
+                    key={route.path}
+                  />
+                );
+              })}
+            </Routes>
+          </ScrollContainer>
         </PageWrapper>
       </BrowserRouter>
     </Suspense>

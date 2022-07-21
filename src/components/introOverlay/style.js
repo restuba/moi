@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   .top {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
     left: 0;
     top: 0;
     .overlay-top {

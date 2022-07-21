@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { Typography } from '../../components';
 import Wrapper from './style';
 import { listOfCapability } from './capability.config';
+import section from '../../configs/section';
 
 const Index = () => {
   const animation = useAnimation();
@@ -18,6 +19,7 @@ const Index = () => {
 
   return (
     <Wrapper
+      id={section.capability}
       ref={container}
       animate={animation}
       initial="hidden"

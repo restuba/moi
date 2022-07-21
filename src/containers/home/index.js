@@ -1,6 +1,7 @@
 import React, { useLayoutEffect } from 'react';
 import Wrapper from './style';
 import { animation } from './home.config';
+import section from '../../configs/section';
 
 const Index = () => {
   useLayoutEffect(() => {
@@ -8,7 +9,7 @@ const Index = () => {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper id={section.home}>
       <div className="component_banner_main">
         <h1>
           <div className="line">

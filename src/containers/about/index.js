@@ -3,6 +3,7 @@ import { useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Wrapper from './style';
 import { Typography } from '../../components';
+import section from '../../configs/section';
 
 const Index = () => {
   const animation = useAnimation();
@@ -17,6 +18,7 @@ const Index = () => {
 
   return (
     <Wrapper
+      id={section.about}
       ref={aboutRef}
       animate={animation}
       initial="hidden"

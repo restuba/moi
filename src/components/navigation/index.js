@@ -1,11 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Wrapper, { NavList } from './style';
 import { navRoutes } from './navigation.config';
 import Typography from '../typography';
 
 const Navigation = ({ toggleMenu, onCursor, setToggleMenu }) => {
+  const onClickNavItem = (id) => {
+    setToggleMenu(false);
+    const selected = document.getElementById(id);
+    if (selected) {
+      selected.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <AnimatePresence>
       {toggleMenu && (
@@ -20,25 +27,24 @@ const Navigation = ({ toggleMenu, onCursor, setToggleMenu }) => {
               {navRoutes.map((route) => {
                 return (
                   <div
-                    key={route.path}
+                    key={route.id}
                     onMouseEnter={() => {
                       onCursor('pointer');
                     }}
                     onMouseLeave={onCursor}
                     className="component_nav_list_item"
                   >
-                    <Link
-                      to={route.path}
+                    <div
+                      aria-hidden="true"
+                      className="link"
                       onClick={() => {
-                        setToggleMenu(false);
+                        onClickNavItem(route.id);
                       }}
                     >
-                      <div className="link">
-                        <Typography size={{ sm: 2, md: 3 }} weight={700} fit>
-                          {route.label}
-                        </Typography>
-                      </div>
-                    </Link>
+                      <Typography size={{ sm: 2, md: 3 }} weight={700} fit>
+                        {route.label}
+                      </Typography>
+                    </div>
                   </div>
                 );
               })}

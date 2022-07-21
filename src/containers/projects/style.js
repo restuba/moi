@@ -35,7 +35,6 @@ export const ItemWrapper = styled(motion.div)`
     filter: gray;
     -webkit-filter: grayscale(100%);
     transition: all 0.6s ease;
-    z-index: -1;
     opacity: 0.4;
     img {
       object-fit: cover;

@@ -10,6 +10,7 @@ import {
   useGlobalDispatchContext,
   useGlobalStateContext,
 } from '../../context/globalContext';
+import section from '../../configs/section';
 
 const Index = () => {
   const animation = useAnimation();
@@ -32,6 +33,7 @@ const Index = () => {
   return (
     <Wrapper
       ref={container}
+      id={section.project}
       animate={animation}
       initial="hidden"
       variants={{

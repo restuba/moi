@@ -4,16 +4,16 @@ import breakpoints from '../../configs/breakpoints';
 import colors from '../../configs/colors';
 
 const Wrapper = styled.div`
-  transition: 0.6s background-color ease-out;
-  width: 100vw;
-  height: 100vh;
-  background: ${({ theme }) => {
-    return theme.background;
-  }};
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
+  .component_background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: ${({ theme }) => {
+      return theme.background;
+    }};
+    transition: 0.6s background-color ease-out;
+  }
   .component_sidebar_wrapper {
     position: fixed;
     width: 80px;
@@ -61,9 +61,10 @@ const Wrapper = styled.div`
   }
   .component_children_wrapper {
     display: grid;
-    width: calc(100vw - 0px);
-    padding: 24px;
-    box-sizing: border-box;
+    width: calc(100vw - 48px);
+    margin: 0 24px;
+    position: relative;
+    height: 100%;
   }
   .circle {
     position: fixed;
@@ -99,9 +100,9 @@ const Wrapper = styled.div`
       width: 120px;
     }
     .component_children_wrapper {
-      width: calc(100vw - 120px);
+      width: calc(100vw - 160px);
       margin-left: 120px;
-      padding: 40px;
+      margin-right: 40px;
     }
   }
 `;

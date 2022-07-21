@@ -5,6 +5,7 @@ import { useInView } from 'react-intersection-observer';
 import { Typography } from '../../components';
 import { DownloadIcon, OpenLinkIcon } from '../../assets';
 import Wrapper from './style';
+import section from '../../configs/section';
 
 const Index = () => {
   const animation = useAnimation();
@@ -19,6 +20,7 @@ const Index = () => {
 
   return (
     <Wrapper
+      id={section.contact}
       ref={container}
       animate={animation}
       initial="hidden"
@@ -48,7 +50,7 @@ const Index = () => {
           <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem" block>
             Got a project in mind? Okay, lets get started!
           </Typography>
-          <div className="component_contact_item">
+          <div className="component_contact_item" block>
             <Typography
               tag="div"
               size={{ sm: 2, md: 2 }}
@@ -57,7 +59,7 @@ const Index = () => {
             >
               Email
             </Typography>
-            <Typography tag="div" size={{ sm: 2, md: 3 }} unit="rem">
+            <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem" block>
               <a
                 href="mailto:resbayuaji@gmail.com"
                 className="component_contact_item_link"
@@ -75,10 +77,11 @@ const Index = () => {
               size={{ sm: 2, md: 2 }}
               weight={500}
               unit="rem"
+              block
             >
               Linkedin
             </Typography>
-            <Typography tag="div" size={{ sm: 2, md: 3 }} unit="rem">
+            <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem" block>
               <a
                 href="https://www.linkedin.com/in/restuba/"
                 className="component_contact_item_link"
@@ -99,7 +102,7 @@ const Index = () => {
             >
               Github
             </Typography>
-            <Typography tag="div" size={{ sm: 2, md: 3 }} unit="rem">
+            <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem">
               <a
                 href="https://github.com/restuba"
                 className="component_contact_item_link"
@@ -120,7 +123,7 @@ const Index = () => {
             >
               Behance
             </Typography>
-            <Typography tag="div" size={{ sm: 2, md: 3 }} unit="rem">
+            <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem">
               <a
                 href="https://www.behance.net/rbayua"
                 className="component_contact_item_link"
@@ -133,7 +136,7 @@ const Index = () => {
             </Typography>
           </div>
           <div className="component_contact_item">
-            <Typography tag="div" size={{ sm: 2, md: 3 }} unit="rem">
+            <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem">
               <a
                 href="https://github.com/restuba/me/raw/a082c8d9bb3e90de43e1fdd74455273469c42d77/src/assets/img/CV%20-%20Restu%20Bayu%20Aji.pdf"
                 target="_blank"

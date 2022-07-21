@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import gsap from 'gsap';
 import Wrapper, { Logo, Menu } from './style';
@@ -9,7 +9,6 @@ import {
 import CustomCursor from '../customCursor';
 import Navigation from '../navigation';
 import colors from '../../configs/colors';
-import useWindowSize from '../../hooks/useWindowSize';
 import IntroOverlay from '../introOverlay';
 
 const tl = gsap.timeline();
@@ -26,61 +25,17 @@ const animation = (onComplete) => {
   });
 };
 
-const data = {
-  ease: 0.1,
-  current: 0,
-  previous: 0,
-  rounded: 0,
-};
-
 const Index = (props) => {
   const { children } = props;
-  const size = useWindowSize();
-  const app = useRef();
-  const scrollContainer = useRef();
 
   const dispatch = useGlobalDispatchContext();
   const { cursorStyles, currentTheme } = useGlobalStateContext();
   const [toggleMenu, setToggleMenu] = useState(false);
   const [animationComplete, setAnimationComplete] = useState(false);
 
-  const setBodyHeight = () => {
-    document.body.style.height = `${
-      scrollContainer.current.getBoundingClientRect().height
-    }px`;
-  };
-
   useLayoutEffect(() => {
     animation(setAnimationComplete);
   }, []);
-
-  const skewScrolling = () => {
-    data.current = window.scrollY;
-    data.previous += (data.current - data.previous) * data.ease;
-    data.rounded = Math.round(data.previous * 100) / 100;
-
-    const difference = data.current - data.rounded;
-    const acceleration = difference / size.width;
-    const velocity = +acceleration;
-    const skewValue = size.width > 768 ? 24 : 12;
-    const skew = velocity * skewValue;
-
-    scrollContainer.current.style.transform = `translate3d(0, -${data.rounded}px, 0) skewY(${skew}deg)`;
-    requestAnimationFrame(() => {
-      return skewScrolling();
-    });
-  };
-
-  useEffect(() => {
-    requestAnimationFrame(() => {
-      return skewScrolling();
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    setBodyHeight();
-  }, [size]);
 
   useEffect(() => {
     window.localStorage.setItem('theme', currentTheme);
@@ -112,7 +67,8 @@ const Index = (props) => {
   return (
     <ThemeProvider theme={currentTheme === 'dark' ? darkTheme : lightTheme}>
       <CustomCursor toggleMenu={toggleMenu} />
-      <Wrapper open={toggleMenu} ref={app}>
+      <Wrapper open={toggleMenu}>
+        <div className="component_background" />
         <Navigation
           toggleMenu={toggleMenu}
           setToggleMenu={setToggleMenu}
@@ -157,9 +113,7 @@ const Index = (props) => {
             <div className="component_scroll_line" />
           </div>
         </div>
-        <div ref={scrollContainer} className="component_children_wrapper">
-          {children}
-        </div>
+        <div className="component_children_wrapper">{children}</div>
       </Wrapper>
     </ThemeProvider>
   );
