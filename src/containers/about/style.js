@@ -11,7 +11,7 @@ const Wrapper = styled(motion.div)`
     flex-direction: column;
     row-gap: 2rem;
     .component_body {
-      font-family: 'Arial', Arial, sans-serif;
+      /* font-family: 'Arial', Arial, sans-serif; */
       display: flex;
       flex-direction: column;
       row-gap: 1rem;
@@ -21,7 +21,7 @@ const Wrapper = styled(motion.div)`
   @media screen and (min-width: ${breakpoints.md}) {
     .component_about_main {
       .component_body {
-        font-family: 'Domaine';
+        /* font-family: 'Domaine'; */
       }
     }
   }

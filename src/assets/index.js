@@ -6,3 +6,5 @@ export { default as twitterProject } from './img/projects/twitter-clone.png';
 export { default as kolegaProject } from './img/projects/kolega.png';
 export { default as banksakuProject } from './img/projects/banksaku.png';
 export { default as legapaketProject } from './img/projects/legapaket.png';
+export { default as OpenLinkIcon } from './icons/openLink';
+export { default as DownloadIcon } from './icons/download';

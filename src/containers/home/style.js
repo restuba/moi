@@ -8,11 +8,7 @@ const Wrapper = styled.div`
   align-items: center;
   margin-bottom: 40px;
   .component_banner_main {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
     h1 {
       font-size: clamp(60px, 12vw, 15vw);
       font-weight: 700;
@@ -26,11 +22,11 @@ const Wrapper = styled.div`
         overflow-y: hidden;
         display: flex;
         align-items: center;
+        justify-content: center;
         span {
           position: absolute;
-          left: 50%;
           white-space: nowrap;
-          transform: skewY(7deg) translate(-50%, 200px);
+          transform: skewY(7deg) translate(0, 200px);
         }
       }
     }

@@ -1,23 +1,33 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useEffect } from 'react';
-import { motion, AnimateSharedLayout, useAnimation } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { projectList } from '../../configs/projects';
 import { Typography } from '../../components';
 import Wrapper from './style';
 import Item from './item';
+import {
+  useGlobalDispatchContext,
+  useGlobalStateContext,
+} from '../../context/globalContext';
 
-const Index = (props) => {
-  const { onCursor } = props;
+const Index = () => {
   const animation = useAnimation();
+  const dispatch = useGlobalDispatchContext();
+  const { cursorStyles } = useGlobalStateContext();
   const [container, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-200px',
+    rootMargin: '-100px',
   });
 
   useEffect(() => {
     if (inView) animation.start('visible');
   }, [animation, inView]);
+
+  const onCursor = (cursorType) => {
+    const cursor = (cursorStyles.includes(cursorType) && cursorType) || false;
+    dispatch({ type: 'CURSOR_TYPE', cursorType: cursor });
+  };
 
   return (
     <Wrapper
@@ -38,7 +48,7 @@ const Index = (props) => {
         <div className="component_header">
           <Typography
             tag="h1"
-            size={{ sm: 2, md: 4 }}
+            size={{ sm: 2.4, md: 4 }}
             unit="rem"
             weight={700}
             block
@@ -47,15 +57,11 @@ const Index = (props) => {
           </Typography>
         </div>
         <div className="component_body">
-          <AnimateSharedLayout>
-            <motion.div layout className="component_project_list">
-              {projectList.map((item) => {
-                return (
-                  <Item key={item.title} data={item} onCursor={onCursor} />
-                );
-              })}
-            </motion.div>
-          </AnimateSharedLayout>
+          <motion.div layout className="component_project_list">
+            {projectList.map((item) => {
+              return <Item key={item.title} data={item} onCursor={onCursor} />;
+            })}
+          </motion.div>
         </div>
       </div>
     </Wrapper>

@@ -9,7 +9,7 @@ const Index = () => {
   const animation = useAnimation();
   const [container, inView] = useInView({
     triggerOnce: true,
-    rootMargin: '-200px',
+    rootMargin: '-100px',
   });
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Index = () => {
         <div className="component_header">
           <Typography
             tag="h1"
-            size={{ sm: 2, md: 4 }}
+            size={{ sm: 2.4, md: 4 }}
             unit="rem"
             weight={700}
             block
@@ -44,16 +44,16 @@ const Index = () => {
           </Typography>
         </div>
         <div className="component_body">
-          <Typography tag="h4" size={{ sm: 1.15, md: 3 }} unit="rem" block>
+          <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem" block>
             I am well-versed in HTML, CSS and JS. I primarily build small to
             medium web apps with React or Native, designing interactive layouts
             and working with different API&apos;s.
           </Typography>
-          <Typography tag="h4" size={{ sm: 1.15, md: 3 }} unit="rem" block>
+          <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem" block>
             Here is a selection of relevant technologies that I am experienced
             in using:
           </Typography>
-          <Typography tag="h4" size={{ sm: 1.15, md: 3 }} unit="rem">
+          <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem">
             <div className="component_list_of_capability">
               {listOfCapability.map((item) => {
                 return (

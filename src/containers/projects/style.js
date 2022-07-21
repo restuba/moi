@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import breakpoints from '../../configs/breakpoints';
 
 const Wrapper = styled(motion.div)`
   display: grid;
@@ -13,7 +14,7 @@ const Wrapper = styled(motion.div)`
     .component_project_list {
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 4rem;
     }
   }
 `;
@@ -23,23 +24,78 @@ export default Wrapper;
 export const ItemWrapper = styled(motion.div)`
   overflow: hidden;
   position: relative;
-  height: 200px;
-  :hover {
-    .component_project_list_item_image {
-      filter: none;
-      left: 200px;
-    }
-  }
   .component_project_list_item_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-position: top;
+    filter: gray;
+    -webkit-filter: grayscale(100%);
+    transition: all 0.6s ease;
+    z-index: -1;
+    opacity: 0.4;
     img {
-      filter: grayscale(1) brightness(40%);
-      position: absolute;
+      object-fit: cover;
       width: 100%;
-      top: 0;
-      mix-blend-mode: color;
-      left: 100px;
     }
   }
   .component_project_list_item_body {
+    color: ${({ theme }) => {
+      return theme.text;
+    }};
+    max-width: 720px;
+    width: 100%;
+    height: 100%;
+    .arrow {
+      width: 120px;
+      height: 80px;
+      display: block;
+      position: relative;
+      transform: scale(0.5);
+      svg {
+        position: absolute;
+        top: 16px;
+        left: -48px;
+        width: 108px;
+        transition: all 0.6s ease;
+        path {
+          fill: ${(props) => {
+            return props.theme.text;
+          }};
+        }
+      }
+    }
+  }
+  :hover {
+    .component_project_list_item_image {
+      -webkit-filter: grayscale(0%);
+      opacity: 0.8;
+      left: 0;
+    }
+    .component_project_list_item_body {
+      .arrow svg {
+        left: 0;
+      }
+    }
+  }
+
+  @media screen and (min-width: ${breakpoints.md}) {
+    .component_project_list_item_image {
+      left: 100px;
+    }
+    .component_project_list_item_body {
+      padding: 0;
+      .arrow {
+        transform: scale(1);
+      }
+    }
+    :hover {
+      .component_project_list_item_image {
+        left: 200px;
+      }
+    }
   }
 `;

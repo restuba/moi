@@ -11,7 +11,7 @@ import {
 export const projectList = [
   {
     title: 'Mov App',
-    year: 'WEB BASED',
+    type: 'WEB BASED',
     tech: 'HTML / CSS / JAVASCRIPT',
     info: 'Build a movie info app using Vanilla Javascript (no framework)',
     link: 'https://mov-app.vercel.app/',
@@ -19,7 +19,7 @@ export const projectList = [
   },
   {
     title: 'Clone Netflix',
-    year: 'WEB BASED',
+    type: 'WEB BASED',
     tech: 'HTML / JAVASCRIPT',
     info: 'Build netflix clone app using Reactjs, StyledComponents, and TMDB API',
     link: 'https://netflix-clone-nu.vercel.app/',
@@ -27,7 +27,7 @@ export const projectList = [
   },
   {
     title: 'Twitter App',
-    year: 'WEB BASED',
+    type: 'WEB BASED',
     tech: 'HTML / CSS / JAVASCRIPT',
     info: 'Cloning twitter app using React js, Tailwind css, and API Github',
     link: 'https://twitterapp-clone.vercel.app/',
@@ -35,7 +35,7 @@ export const projectList = [
   },
   {
     title: 'Kolega Coworking Space',
-    year: 'WEB BASED',
+    type: 'WEB BASED',
     tech: 'HTML / CSS / PHP / MySQL',
     info: 'Build a client website with HTML, CSS, PHP, and MySQL',
     link: 'http://kolegainternship.epizy.com/',
@@ -43,7 +43,7 @@ export const projectList = [
   },
   {
     title: 'Banksaku Design',
-    year: 'DESIGN',
+    type: 'DESIGN',
     tech: 'Figma',
     info: 'Design of Banksaku App for college assignments',
     link: 'https://www.behance.net/gallery/80412961/Banksaku-App-Personal-finance',
@@ -51,7 +51,7 @@ export const projectList = [
   },
   {
     title: 'Legapaket Design',
-    year: 'DESIGN',
+    type: 'DESIGN',
     tech: 'Adobe XD',
     info: 'Design of Transporation Service Produck for PT. Leuwigajah',
     link: 'https://www.behance.net/gallery/103260921/UI-Legapaket?',
@@ -59,7 +59,7 @@ export const projectList = [
   },
   {
     title: 'Kolega Coworking Space Design',
-    year: 'DESIGN',
+    type: 'DESIGN',
     tech: 'Figma',
     info: 'Redesign of Kolega Coworking Space',
     link: 'https://www.behance.net/gallery/148393097/Kolega',

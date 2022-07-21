@@ -24,6 +24,9 @@ const Wrapper = styled.div`
     font-weight: ${({ weight }) => {
       return weight;
     }};
+    letter-spacing: 1px;
+    /* white-space: break-spaces;
+    line-break: anywhere; */
   }
 
   @media screen and (min-width: ${breakpoints.md}) {
