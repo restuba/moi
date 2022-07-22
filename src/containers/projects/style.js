@@ -6,7 +6,7 @@ const Wrapper = styled(motion.div)`
   display: grid;
   align-items: center;
   margin-bottom: 20rem;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   .component_project_main {
     display: flex;
     flex-direction: column;

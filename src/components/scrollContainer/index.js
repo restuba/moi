@@ -60,7 +60,7 @@ export default ({ children }) => {
       window.removeEventListener('resize', resize);
       window.removeEventListener('scroll', updateScroll);
     };
-  }, [init, resize, updateScroll]);
+  }, []);
 
   return <div ref={container}>{children}</div>;
 };

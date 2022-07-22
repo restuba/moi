@@ -47,10 +47,10 @@ const Index = () => {
           </Typography>
         </div>
         <div className="component_body">
-          <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem" block>
+          <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem">
             Got a project in mind? Okay, lets get started!
           </Typography>
-          <div className="component_contact_item" block>
+          <div className="component_contact_item">
             <Typography
               tag="div"
               size={{ sm: 2, md: 2 }}
@@ -59,7 +59,7 @@ const Index = () => {
             >
               Email
             </Typography>
-            <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem" block>
+            <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem">
               <a
                 href="mailto:resbayuaji@gmail.com"
                 className="component_contact_item_link"
@@ -81,7 +81,7 @@ const Index = () => {
             >
               Linkedin
             </Typography>
-            <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem" block>
+            <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem">
               <a
                 href="https://www.linkedin.com/in/restuba/"
                 className="component_contact_item_link"

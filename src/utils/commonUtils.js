@@ -8,5 +8,5 @@ export const setStyles = (container = {}) => {
   container.style.position = 'absolute';
   // container.style.zIndex = 2;
   container.style.width = '100%';
-  container.classList.add('active');
+  container.setAttribute('id', 'container_scroll');
 };

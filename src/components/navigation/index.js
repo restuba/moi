@@ -7,12 +7,14 @@ import Typography from '../typography';
 const Navigation = ({ toggleMenu, onCursor, setToggleMenu }) => {
   const onClickNavItem = (id) => {
     setToggleMenu(false);
-    const selected = document.getElementById(id);
-    if (selected) {
-      selected.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const element = document.getElementById(id);
+    if (element) {
+      window.scroll({ top: element.offsetTop / 2, behavior: 'smooth' });
+      const container = document.getElementById('container_scroll');
+      container.style.transform = `translateY(${-element.offsetTop}px)`;
+      container.style.WebkitTransform = `translateY(${-element.offsetTop}px)`;
     }
   };
-
   return (
     <AnimatePresence>
       {toggleMenu && (
