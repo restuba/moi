@@ -1,10 +1,17 @@
+import { lazy } from 'react';
 import URL_GENERAL from '../configs/url/general';
-import Landing from './landing';
+
+const RouteComponent = (lazyImport) => {
+  const Component = lazy(() => {
+    return lazyImport;
+  });
+  return <Component />;
+};
 
 const routes = [
   {
     path: URL_GENERAL.LANDING,
-    component: <Landing />,
+    component: RouteComponent(import('./landing')),
   },
 ];
 

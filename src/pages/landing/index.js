@@ -1,9 +1,20 @@
-import React from 'react';
-import Home from '../../containers/home';
-import About from '../../containers/about';
-import Capability from '../../containers/capability';
-import Projects from '../../containers/projects';
-import Contact from '../../containers/contact';
+import React, { lazy } from 'react';
+
+const Home = lazy(() => {
+  return import('../../containers/home');
+});
+const About = lazy(() => {
+  return import('../../containers/about');
+});
+const Capability = lazy(() => {
+  return import('../../containers/capability');
+});
+const Projects = lazy(() => {
+  return import('../../containers/projects');
+});
+const Contact = lazy(() => {
+  return import('../../containers/contact');
+});
 
 const Index = () => {
   return (
