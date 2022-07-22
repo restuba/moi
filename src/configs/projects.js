@@ -54,7 +54,7 @@ export const projectList = [
     type: 'DESIGN',
     tech: 'Adobe XD',
     info: 'Design of Transporation Service Produck for PT. Leuwigajah',
-    link: 'https://www.behance.net/gallery/103260921/UI-Legapaket?',
+    link: 'https://www.behance.net/gallery/103260921/UI-Legapaket',
     image: legapaketProject,
   },
   {

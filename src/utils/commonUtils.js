@@ -7,6 +7,6 @@ export const setTransform = (el = {}, transform) => {
 export const setStyles = (container = {}) => {
   container.style.position = 'absolute';
   // container.style.zIndex = 2;
-  container.style.width = '100%';
+  // container.style.width = '100%';
   container.setAttribute('id', 'container_scroll');
 };

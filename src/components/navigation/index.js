@@ -4,7 +4,8 @@ import Wrapper, { NavList } from './style';
 import { navRoutes } from './navigation.config';
 import Typography from '../typography';
 
-const Navigation = ({ toggleMenu, onCursor, setToggleMenu }) => {
+const Navigation = (props) => {
+  const { toggleMenu, onCursor, setToggleMenu } = props;
   const onClickNavItem = (id) => {
     setToggleMenu(false);
     const element = document.getElementById(id);

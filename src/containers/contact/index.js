@@ -6,9 +6,15 @@ import { Typography } from '../../components';
 import { DownloadIcon, OpenLinkIcon } from '../../assets';
 import Wrapper from './style';
 import section from '../../configs/section';
+import {
+  useGlobalDispatchContext,
+  useGlobalStateContext,
+} from '../../context/globalContext';
 
 const Index = () => {
   const animation = useAnimation();
+  const dispatch = useGlobalDispatchContext();
+  const { cursorStyles } = useGlobalStateContext();
   const [container, inView] = useInView({
     triggerOnce: true,
     rootMargin: '-100px',
@@ -17,6 +23,11 @@ const Index = () => {
   useEffect(() => {
     if (inView) animation.start('visible');
   }, [animation, inView]);
+
+  const onCursor = (cursorType) => {
+    const cursor = (cursorStyles.includes(cursorType) && cursorType) || false;
+    dispatch({ type: 'CURSOR_TYPE', cursorType: cursor });
+  };
 
   return (
     <Wrapper
@@ -65,6 +76,10 @@ const Index = () => {
                 className="component_contact_item_link"
                 target="_blank"
                 rel="noreferrer"
+                onMouseEnter={() => {
+                  onCursor('hovered');
+                }}
+                onMouseLeave={onCursor}
               >
                 resbayuaji.gmail.com
                 <OpenLinkIcon className="component_contact_item_icon" />
@@ -87,6 +102,10 @@ const Index = () => {
                 className="component_contact_item_link"
                 target="_blank"
                 rel="noreferrer"
+                onMouseEnter={() => {
+                  onCursor('hovered');
+                }}
+                onMouseLeave={onCursor}
               >
                 linkedin.com/in/restuba/
                 <OpenLinkIcon />
@@ -108,6 +127,10 @@ const Index = () => {
                 className="component_contact_item_link"
                 target="_blank"
                 rel="noreferrer"
+                onMouseEnter={() => {
+                  onCursor('hovered');
+                }}
+                onMouseLeave={onCursor}
               >
                 github.com/restuba
                 <OpenLinkIcon />
@@ -129,6 +152,10 @@ const Index = () => {
                 className="component_contact_item_link"
                 target="_blank"
                 rel="noreferrer"
+                onMouseEnter={() => {
+                  onCursor('hovered');
+                }}
+                onMouseLeave={onCursor}
               >
                 behance.net/rbayua
                 <OpenLinkIcon />
@@ -143,6 +170,10 @@ const Index = () => {
                 rel="noreferrer"
                 download
                 className="component_contact_item_link"
+                onMouseEnter={() => {
+                  onCursor('hovered');
+                }}
+                onMouseLeave={onCursor}
               >
                 Curriculum Vitae
                 <DownloadIcon />

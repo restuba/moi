@@ -3,7 +3,7 @@ import { Typography } from '../../components';
 import { ItemWrapper } from './style';
 
 const Item = (props) => {
-  const { data, onCursor } = props;
+  const { data, onCursor, setSelectedProject } = props;
   const [isOpen, setIsOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
 
@@ -11,6 +11,7 @@ const Item = (props) => {
     <ItemWrapper
       layout
       onClick={() => {
+        setSelectedProject(data);
         setIsOpen(!isOpen);
       }}
       onHoverStart={() => {

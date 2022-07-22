@@ -6,7 +6,6 @@ const Wrapper = styled(motion.div)`
   display: grid;
   align-items: center;
   margin-bottom: 20rem;
-  /* min-height: 100vh; */
   .component_project_main {
     display: flex;
     flex-direction: column;
@@ -95,6 +94,48 @@ export const ItemWrapper = styled(motion.div)`
       .component_project_list_item_image {
         left: 200px;
       }
+    }
+  }
+`;
+
+export const ProjectModal = styled(motion.div)`
+  .component_project_modal {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4rem;
+    .component_image {
+      width: 100%;
+      display: grid;
+      overflow-y: auto;
+      img {
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+      }
+    }
+
+    .component_body {
+      .component_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        > {
+          flex: 1;
+        }
+      }
+      .component_item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+      }
+    }
+    .component_item_link {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: ${({ theme }) => {
+        return theme.text;
+      }};
     }
   }
 `;
