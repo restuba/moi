@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import colors from '../../configs/colors';
 
 const Wrapper = styled(motion.div)`
   position: fixed;
@@ -9,8 +8,9 @@ const Wrapper = styled(motion.div)`
   width: 100%;
   height: 100%;
   display: block;
-  background: ${colors.primary};
-  color: #000;
+  background: ${({ theme }) => {
+    return theme.text;
+  }};
   z-index: 100;
   overflow: hidden;
 `;

@@ -10,12 +10,12 @@ const Wrapper = styled(motion.div)`
   height: 100%;
   display: block;
   background: ${({ theme }) => {
-    return theme.background;
+    return theme.text;
   }};
   z-index: 100;
   .component_modal_main {
     height: 100vh;
-    padding: 20px 20px 20px 60px;
+    padding: 20px 20px 20px 80px;
     display: grid;
     overflow-y: auto;
     overflow-x: hidden;
@@ -42,7 +42,7 @@ const Wrapper = styled(motion.div)`
           height: 2px;
           display: block;
           background: ${({ theme }) => {
-            return theme.text;
+            return theme.background;
           }};
           :first-child {
             transform: rotate(45deg);
@@ -57,7 +57,7 @@ const Wrapper = styled(motion.div)`
 
   @media screen and (min-width: ${breakpoints.md}) {
     .component_modal_main {
-      padding: 40px 40px 40px 100px;
+      padding: 40px 40px 40px 120px;
       .component_modal_close {
         left: 40px;
       }

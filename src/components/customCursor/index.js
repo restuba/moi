@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useGlobalStateContext } from '../../context/globalContext';
 import Wrapper from './style';
 
-const CustomCursor = ({ toggleMenu }) => {
+const CustomCursor = () => {
   const { cursorType } = useGlobalStateContext();
   const cursor = useRef(null);
 
@@ -23,9 +23,7 @@ const CustomCursor = ({ toggleMenu }) => {
   return (
     <Wrapper
       // eslint-disable-next-line no-extra-boolean-cast
-      className={`${!!cursorType ? 'hovered' : ''} ${cursorType} ${
-        toggleMenu ? 'nav-open' : ''
-      }`}
+      className={`${!!cursorType ? 'hovered' : ''} ${cursorType}`}
       ref={cursor}
     />
   );

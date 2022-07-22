@@ -32,7 +32,7 @@ const Navigation = (props) => {
                   <div
                     key={route.id}
                     onMouseEnter={() => {
-                      onCursor('pointer');
+                      onCursor('hovered');
                     }}
                     onMouseLeave={onCursor}
                     className="component_nav_list_item"

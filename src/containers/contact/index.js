@@ -3,7 +3,7 @@ import { useAnimation } from 'framer-motion';
 import React, { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Typography } from '../../components';
-import { DownloadIcon, OpenLinkIcon } from '../../assets';
+import { curriculumVitae, DownloadIcon, OpenLinkIcon } from '../../assets';
 import Wrapper from './style';
 import section from '../../configs/section';
 import {
@@ -165,7 +165,7 @@ const Index = () => {
           <div className="component_contact_item">
             <Typography tag="div" size={{ sm: 1, md: 3 }} unit="rem">
               <a
-                href="https://github.com/restuba/me/raw/a082c8d9bb3e90de43e1fdd74455273469c42d77/src/assets/img/CV%20-%20Restu%20Bayu%20Aji.pdf"
+                href={curriculumVitae}
                 target="_blank"
                 rel="noreferrer"
                 download

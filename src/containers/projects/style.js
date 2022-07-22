@@ -99,6 +99,11 @@ export const ItemWrapper = styled(motion.div)`
 `;
 
 export const ProjectModal = styled(motion.div)`
+  .component_font {
+    color: ${({ theme }) => {
+      return theme.background;
+    }};
+  }
   .component_project_modal {
     display: flex;
     flex-direction: column;
@@ -119,6 +124,7 @@ export const ProjectModal = styled(motion.div)`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        flex-wrap: wrap;
         > {
           flex: 1;
         }
@@ -134,7 +140,7 @@ export const ProjectModal = styled(motion.div)`
       align-items: center;
       gap: 4px;
       color: ${({ theme }) => {
-        return theme.text;
+        return theme.background;
       }};
     }
   }
