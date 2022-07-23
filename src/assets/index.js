@@ -7,3 +7,4 @@ export { default as legapaketProject } from './img/projects/legapaket.png';
 export { default as OpenLinkIcon } from './icons/openLink';
 export { default as DownloadIcon } from './icons/download';
 export { default as curriculumVitae } from './pdf/curriculum-vitae.pdf';
+export { default as wadhbankProject } from './img/projects/wadhbank.png';

@@ -5,10 +5,19 @@ import {
   movProject,
   netflixProject,
   twitterProject,
+  wadhbankProject,
 } from '../assets';
 
 // eslint-disable-next-line import/prefer-default-export
 export const projectList = [
+  {
+    title: 'Wadhbank',
+    type: 'WEB BASED',
+    tech: 'HTML / TYPESCRIPT / NEXT JS',
+    info: 'Build a landing page and dashboard page using NextJs, Typescript, AntDesign, Styled Component',
+    link: 'https://www.wadhbank.com/',
+    image: wadhbankProject,
+  },
   {
     title: 'Mov App',
     type: 'WEB BASED',
@@ -21,7 +30,7 @@ export const projectList = [
     title: 'Clone Netflix',
     type: 'WEB BASED',
     tech: 'HTML / JAVASCRIPT',
-    info: 'Build netflix clone app using Reactjs, StyledComponents, and TMDB API',
+    info: 'Build netflix clone app using ReactJs, StyledComponents, and TMDB API',
     link: 'https://netflix-clone-nu.vercel.app/',
     image: netflixProject,
   },
@@ -29,7 +38,7 @@ export const projectList = [
     title: 'Twitter App',
     type: 'WEB BASED',
     tech: 'HTML / CSS / JAVASCRIPT',
-    info: 'Cloning twitter app using React js, Tailwind css, and API Github',
+    info: 'Cloning twitter app using ReactJs, Tailwind css, and API Github',
     link: 'https://twitterapp-clone.vercel.app/',
     image: twitterProject,
   },
