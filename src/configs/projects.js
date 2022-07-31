@@ -4,7 +4,7 @@ import {
   legapaketProject,
   movProject,
   netflixProject,
-  twitterProject,
+  // twitterProject,
   wadhbankProject,
 } from '../assets';
 
@@ -34,14 +34,14 @@ export const projectList = [
     link: 'https://netflix-clone-nu.vercel.app/',
     image: netflixProject,
   },
-  {
-    title: 'Twitter App',
-    type: 'WEB BASED',
-    tech: 'HTML / CSS / JAVASCRIPT',
-    info: 'Cloning twitter app using ReactJs, Tailwind css, and API Github',
-    link: 'https://twitterapp-clone.vercel.app/',
-    image: twitterProject,
-  },
+  // {
+  //   title: 'Twitter App',
+  //   type: 'WEB BASED',
+  //   tech: 'HTML / CSS / JAVASCRIPT',
+  //   info: 'Cloning twitter app using ReactJs, Tailwind css, and API Github',
+  //   link: 'https://twitterapp-clone.vercel.app/',
+  //   image: twitterProject,
+  // },
   {
     title: 'Kolega Coworking Space',
     type: 'WEB BASED',
