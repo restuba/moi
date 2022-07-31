@@ -47,9 +47,9 @@ const Index = () => {
         </div>
         <div className="component_body">
           <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem" block>
-            I am well-versed in HTML, CSS and JS. I primarily build small to
+            I am well-versed in HTML, CSS, and JS. Most of all, I build small to
             medium web apps with React or Native, designing interactive layouts
-            and working with different API&apos;s.
+            and working with different APIs.
           </Typography>
           <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem" block>
             Here is a selection of relevant technologies that I am experienced

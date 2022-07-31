@@ -51,9 +51,8 @@ const Index = () => {
             challenging myself, and do interesting things that matter.
           </Typography>
           <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem" block>
-            with passionate creative enthusiastic and always try to learn,
-            i&apos;ve expertise in develop website and app so really quality and
-            unique.
+            with passionate creative enthusiasm and always trying to learn,
+            I&apos;ve expertise in developing good quality websites and apps
           </Typography>
           <Typography tag="h4" size={{ sm: 2, md: 3 }} unit="rem" block>
             Delivering highly executed front-end user experiences by paying
