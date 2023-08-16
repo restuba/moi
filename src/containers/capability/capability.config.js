@@ -4,8 +4,8 @@ export const listOfCapability = [
   'CSS',
   'Javascript',
   'ES6',
-  'React js',
-  'Next js',
+  'ReactJS',
+  'NextJS',
   'Bootstrap',
   'Redux',
   'Context API',
@@ -14,4 +14,7 @@ export const listOfCapability = [
   'Ant Design',
   'Tailwind',
   'Figma (Software)',
+  'Typescript',
+  'Hooks',
+  'Git'
 ];
